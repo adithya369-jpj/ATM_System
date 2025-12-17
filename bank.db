@@ -1,0 +1,13 @@
+CREATE TABLE accounts (
+    account_number TEXT PRIMARY KEY,
+    name TEXT,
+    pin TEXT,
+    balance REAL
+);
+CREATE TABLE transactions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    account_number TEXT,
+    type TEXT,
+    amount REAL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
